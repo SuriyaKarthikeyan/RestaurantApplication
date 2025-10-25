@@ -1,4 +1,4 @@
-# Build a Restaurant APP for Jayam Web Solutiions
+# Build a Web APP for Jayam Web Solutiions
 - Using json-server (your own local fake REST API)
 - Install json server using the command --- npm install -g json-server
 - Creating db.json file
@@ -21,3 +21,21 @@
 - Then give the command -- npm run build [build folder to be given as dist in vite]
 - Provide the command - firebase deploy
 - Now, the code is deployed in firebase -- [URL: https://resapp-45ea8.web.app]
+
+# Project Flow
+- User Signs up - On clicking Submit - Validation Done and Sign Up Authentication done using firebase.
+- After authentication - the user details gets stored on the Redux Store. 
+- User gets redirects to the Dashboard page.
+
+- User Signs In - On clicking submit - Validation Done and Sign In Authentication done using firebase.
+- User fets redirected to the Dashboard page.
+
+- On signing In - if user signed up as a admin role, but signed in for a user role - it will show up error message - using firestore.
+
+- On the Dashboard page header - if user clicks on "Sign Out" - it will sign out of the application and redirects to the login page and remove the corresponding user from the redux store.
+
+- If user role is "user" - then show the User Dashboard otherwise show Admin Dashboard.
+
+- On the User Dashboard - Display the products from the json server endpoints - 
+- http://localhost:5000/categories
+- http://localhost:5000/products
