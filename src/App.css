@@ -106,9 +106,24 @@ body {
     margin-top: 70px;
 }
 
-.cart-result {
-    padding-left: 20px;
-    margin-top: 90px;
+.no-items {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.cart-result, .no-items {
+    padding: 10px;
+    background: #e9ecee;
+    
+    margin: 90px 20px 20px 20px;
+}
+
+.wish-list {
+    padding-top: 16px;
+}
+.wish-list p {
+    margin-top: 0;
 }
 
 .prd-cat-title {
@@ -128,8 +143,12 @@ body {
 .category-item img, .product-item img {
     margin: 0 auto;
     display: block;
-    width: 50px;
-    height: 50px;
+
+}
+
+.prd-img {
+    width: 200px;
+    height: 200px;
 }
 
 .category-item p, .product-item p {
@@ -227,28 +246,31 @@ body {
 /* Sorting Feature */
 .sort-box select {
     padding: 10px;
-    width: 120px;
+    width: 190px;
     border-radius: 4px;
     margin-left: 5px;
 }
 
 .cart-table tr, .cart-table td {
-    border: 1px solid #ccc;
+  /*  border: 1px solid #ccc; */
 
 }
 
 .cart-table {
     width: 500px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .cart-table td:first-child {
-    width: 20%;
+    width: 48%;
 }
 .cart-table td:nth-child(2) {
     width: 10%;
 }
-.cart-table td:last-child {
+.cart-table td:nth-child(3) {
+    width: 30%;
+}
+.cart-table td:nth-child(4) {
 width: 10%;
 }
 
@@ -256,9 +278,142 @@ width: 10%;
     padding: 0px 2px;
 }
 .remove-cart {
-    padding: 10px 25px;
+   
+        font-family: 'Poppins', sans-serif;
+    color: #3B25C1;
+    font-weight: 600;
     background-color: transparent;
-    color: #000;
-    border-radius: 4px;
+    border: 0px;
+    font-size: 11px;
+    padding: 5px 16px;
+    
+    cursor: pointer;
+}
+
+.cart-section {
+    display: flex;
+    gap: 100px;
+    
+}
+
+/* Address Section */
+.current-address, .order-section {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.address-details {
+    flex-grow: 1;
+}
+.order-btn {
+    margin-bottom: 12px;
+    background: #3B25C1;
+    border: 0;
+    padding: 15px;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.address-heading, .order-heading, .cart-list p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.address-title {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.address-det {
+    margin-top: 0;
+    color: grey;
+}
+
+.change-text {
+    color: #3B25C1;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.current-address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.address-details {
+    background-color: #fff;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+.address-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.dis-block {
+    display: block;
+}
+.add-box {
+    padding: 20px 30px;
     border: 1px solid #ccc;
+    flex-basis: 25%;
+    margin-bottom: 10px;
+}
+.add-btn, .save-btn {
+    background-color: #3B25C1;
+    color: #fff;
+    padding: 10px 15px;
+    border: 0px;
+    cursor: pointer;
+}
+.add-text {
+    height: 64px;
+    font-size: 12px;
+    color: grey;
+    margin-top: 0;
+}
+
+.add-title {
+    margin-top: 0;
+}
+.show-add-title {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+/* Add Address Form */
+.add-new-address-form {
+    background-color : #e9ecee;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.add-new-address-form input {
+    padding: 10px 5px;
+    margin-bottom: 15px;
+        display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.full-address {
+    height: 60px;
+}
+.save-btn {
+    width: 100%;
 }

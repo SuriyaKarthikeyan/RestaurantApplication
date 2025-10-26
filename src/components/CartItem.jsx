@@ -12,8 +12,12 @@ const CartItem = ({showCart}) => {
                     <td>{showCart.title}</td>
                     <td>{showCart.price}</td>
                     <td><button onClick={removeItem} className="remove-cart">Remove from Cart </button></td>
-                    
+                      <td>Qty: {showCart.quantity}</td>
                 </tr>
+
+                
+
+
             
         </>
     )

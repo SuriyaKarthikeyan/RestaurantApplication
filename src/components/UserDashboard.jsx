@@ -48,9 +48,17 @@ const UserDashboard = () => {
           sortedResult = [...productList].sort((a, b) =>
                 a.title.localeCompare(b.title));
           }
-          if(sortValue === "Price") 
+          if(sortValue === "Price -- Low to High") 
           {
             sortedResult = [...productList].sort((a, b) => a.price - b.price);
+          }
+          if(sortValue === "Price -- High to Low") 
+          {
+            sortedResult = [...productList].sort((a, b) => b.price - a.price);
+          }
+          if(sortValue === "Highest to Lowest Rating") 
+          {
+            sortedResult = [...productList].sort((a, b) => b.rating.rate - a.rating.rate);
           }
           return sortedResult;
         }

@@ -6,6 +6,8 @@ import searchValueReducer from "./searchValueSlice.js";
 import sortValueReducer from "./sortValueSlice.js";
 import cartReducer from "./cartSlice.js";
 import wishListReducer from "./wishListSlice.js";
+import currentAddressReducer from "./currentAddressSlice.js";
+import savedAddressReducer from "./savedAddressesSlice.js";
 const appStore = configureStore(
     {
         reducer : {
@@ -15,7 +17,9 @@ const appStore = configureStore(
            searchValue : searchValueReducer,
            sortValue : sortValueReducer,
            cart: cartReducer,
-           wishlist : wishListReducer
+           wishlist : wishListReducer,
+           currentAddress: currentAddressReducer,
+           savedAddress: savedAddressReducer
         },
     }
 );

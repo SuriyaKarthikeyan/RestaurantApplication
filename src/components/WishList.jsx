@@ -6,10 +6,18 @@ const WishList = () => {
     return (
         <>
         <Header context="wishlist" />
-          <div className="cart-result">
+
+         {!wlResult || wlResult.length === 0 ? ( <p className="no-items"> No items in your WishList </p> ) :
+
+          (<div className="cart-result">
+            
+            <div className="wish-list">
               <p>Wishlist Results: </p>
-          <WLList show={wlResult} />
+               <WLList show={wlResult} />
+            </div>
+            
        </div>
+          )}
         </>
     )
 };

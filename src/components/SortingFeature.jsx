@@ -13,7 +13,9 @@ const SortingFeature = () => {
             <span> Sort By: </span>
             <select onChange={pushSortedItem} ref={sortedItem}>
                 <option>Title</option>
-                <option>Price</option>
+                <option>Price -- Low to High</option>
+                <option>Price -- High to Low</option>
+                <option>Highest to Lowest Rating</option>
             </select>
             </div>
         </>

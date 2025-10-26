@@ -12,7 +12,7 @@ const WLItem = ({showWL}) => {
                     <td>{showWL.title}</td>
                     <td>{showWL.price}</td>
                     <td><button onClick={removeItem} className="remove-cart">Remove from Wishlist </button></td>
-                    
+                     <td>Qty: {showWL.quantity}</td>
                 </tr>
             
         </>
