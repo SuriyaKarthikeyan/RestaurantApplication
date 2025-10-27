@@ -2,6 +2,7 @@ import Login from './Login.jsx';
 import Dashboard from './Dashboard.jsx';
 import Cart from './Cart.jsx';
 import WishList from './WishList.jsx';
+import Orders from './Orders.jsx';
 import {RouterProvider, createBrowserRouter} from "react-router-dom";
 const Body = () => {
      const appRouter = createBrowserRouter([
@@ -20,6 +21,10 @@ const Body = () => {
         {
             path: "/wishlist",
             element: <WishList />
+        },
+        {
+            path: "/orders",
+            element: <Orders />
         }
       ]);
 

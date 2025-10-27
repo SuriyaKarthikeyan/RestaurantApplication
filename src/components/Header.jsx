@@ -31,6 +31,9 @@ useEffect(()=> {
         else if(context === "wishlist") {
             navigate("/wishlist");
         }
+         else if(context === "order") {
+            navigate("/orders");
+        }
         else {
             navigate("/dashboard");
         }
@@ -53,6 +56,9 @@ useEffect(()=> {
     const goToDashboard = () => {
         navigate("/dashboard");
     }
+    const goToOrders = () => {
+        navigate("/orders");
+    }
     return (
         <>
             <div className="header-section">
@@ -62,6 +68,7 @@ useEffect(()=> {
                      <span className="dashboard-text" onClick={goToDashboard}>Dashboard</span>
                      <span className="cart-text" onClick={goToCart}>Cart</span>
                       <span className="wl-text" onClick={goToWishlist}>WishList</span>
+                      <span className="wl-text" onClick={goToOrders}>Order History</span>
                      <span className="signout-text" onClick={handleSignOut}> SignOut </span>
 
                      </div>

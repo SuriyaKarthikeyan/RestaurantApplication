@@ -8,6 +8,7 @@ import cartReducer from "./cartSlice.js";
 import wishListReducer from "./wishListSlice.js";
 import currentAddressReducer from "./currentAddressSlice.js";
 import savedAddressReducer from "./savedAddressesSlice.js";
+import orderReducer from "./orderSlice.js";
 const appStore = configureStore(
     {
         reducer : {
@@ -19,7 +20,8 @@ const appStore = configureStore(
            cart: cartReducer,
            wishlist : wishListReducer,
            currentAddress: currentAddressReducer,
-           savedAddress: savedAddressReducer
+           savedAddress: savedAddressReducer,
+           orders: orderReducer
         },
     }
 );

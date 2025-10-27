@@ -118,7 +118,10 @@ body {
     
     margin: 90px 20px 20px 20px;
 }
-
+.order-history {
+    padding-left: 20px;
+    margin-top: 90px;
+}
 .wish-list {
     padding-top: 16px;
 }
@@ -317,6 +320,7 @@ width: 10%;
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
 }
 
 .address-heading, .order-heading, .cart-list p {
@@ -417,3 +421,44 @@ width: 10%;
 .save-btn {
     width: 100%;
 }
+
+/* Order Table */
+.order-img img {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.order-details {
+    display: flex;
+    
+}
+
+.order-details span {
+    flex-basis: 20%;
+    display: inline-block;
+    background-color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+
+    padding: 10px 0;
+}
+.order-history {
+    padding: 10px 20px;
+    margin: 90px 20px 0;
+    margin-left: 20px;
+   
+   
+    background: #e9ecee;
+}
+.font-color-primary {
+    color: #3B25C1;
+}
+.font-weight-bold {
+    font-weight : 600;
+}
+
+
+

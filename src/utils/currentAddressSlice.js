@@ -5,7 +5,10 @@ const currentAddressSlice = createSlice(
         name: "currentAddress",
         initialState : 
         { 
-          address : null,
+          address : {
+            type : "Home",
+            address : "Set up your current address before proceeding with placing the Order."
+          },
           changeText : false
         },
         reducers: {
