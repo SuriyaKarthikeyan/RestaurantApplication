@@ -18,8 +18,8 @@ const CurrentAddress = () => {
         itemsInCart.map((item)=> {
             console.log("item");
             console.log(item);
-            const {image, title, price, quantity} = item;
-            const orderObj = {image,title,price,quantity,status: "On Process"};
+            const {id, image, title, price, quantity} = item;
+            const orderObj = {id, image,title,price,quantity,status: "On Process"};
             dispatch(addOrder(orderObj));
         })
     }

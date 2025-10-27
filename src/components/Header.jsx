@@ -12,7 +12,7 @@ const Header = ({context}) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const readUser = useSelector((store)=> store?.user);
-  
+    
 
     const handleSignOut = () => {
     signOut(auth).then(() => {
@@ -65,11 +65,15 @@ useEffect(()=> {
                 <p className="logo-text"> JWS Store</p>
                 {context!=="login" && (
                     <div className="top-right-bar">
-                     <span className="dashboard-text" onClick={goToDashboard}>Dashboard</span>
-                     <span className="cart-text" onClick={goToCart}>Cart</span>
-                      <span className="wl-text" onClick={goToWishlist}>WishList</span>
-                      <span className="wl-text" onClick={goToOrders}>Order History</span>
-                     <span className="signout-text" onClick={handleSignOut}> SignOut </span>
+                         <span className="dashboard-text" onClick={goToDashboard}>Dashboard</span>
+                         {readUser.role!== "admin" && (
+                           <>
+                           <span className="cart-text" onClick={goToCart}>Cart</span>
+                           <span className="wl-text" onClick={goToWishlist}>WishList</span>
+                           <span className="wl-text" onClick={goToOrders}>Order History</span>
+                           </>
+                          )}
+                          <span className="signout-text" onClick={handleSignOut}> SignOut </span>
 
                      </div>
                 )}
